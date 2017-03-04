@@ -5,6 +5,17 @@ import static org.junit.Assert.*;
 import org.junit.Before;
 import org.junit.Test;
 
+/**
+ * Clase de test unitarios para la clase Fecha, comprobando
+ * tanto el rango de fechas como el correcto comportamiento
+ * en años bisiestos
+ * 
+ * @version 1.0, 04/03/2017
+ * 
+ * @author Juan Manuel Beltrán Osa 
+ *
+ */
+
 public class FechaTest {
 	
 	Fecha fCorrect;
@@ -18,6 +29,12 @@ public class FechaTest {
 	Fecha fWrongBisiesto;
 	
 	Fecha fWrongYear;
+	
+	/**
+	 * Método setUp de la clase <code>FechaTest</code>
+	 * @throws Exception controlamos posibles excepciones
+	 * Instanciams las variables
+	 */
 
 	@Before
 	public void setUp() throws Exception {
@@ -35,6 +52,13 @@ public class FechaTest {
 		fWrongBisiesto = new Fecha(29, 2, 2017);
 		
 	}
+	
+	/**
+	 * Métdo test de la clase <code>FechaTest</code>
+	 * Comprobamos si los datos arrojados por las instancias
+	 * de la clase Fecha están dentro de los datos esperados, 
+	 * tant los positivos como los negativos
+	 */
 
 	@Test
 	public void test() {
