@@ -31,7 +31,7 @@ public class Fecha {
 		case 11 : diasMes = 30;
 		break;
 		case 2 :
-			if ( (anio % 400 == 0) || ( (anio % 4 == 0) && (anio % 100 != 0) ) )
+			if ( bisiesto() )
 				diasMes = 29;
 			else 
 				diasMes = 28;
@@ -39,6 +39,12 @@ public class Fecha {
 		}
 		
 		return diasMes;
+		
+	}
+	
+	private boolean bisiesto() {
+		
+		return true;
 		
 	}
 	
